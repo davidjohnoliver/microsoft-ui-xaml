@@ -39,8 +39,7 @@
             <StaticResource x:Key="DatePickerFlyoutPresenterSpacerFill" ResourceKey="DividerStrokeColorDefaultBrush" />
             <StaticResource x:Key="DatePickerFlyoutPresenterHighlightFill" ResourceKey="AccentFillColorDefaultBrush" />
             <StaticResource x:Key="DatePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="TextOnAccentFillColorPrimary" />
-            <x:Double x:Key="DatePickerFlyoutPresenterHighlightOverlayOpacity">1</x:Double>
-            <x:Double x:Key="DatePickerFlyoutPresenterHighlightBackgroundOpacity">0</x:Double>
+            <Visibility x:Key="DatePickerFlyoutPresenterHighlightXRayVisibility">Visible</Visibility>
             <StaticResource x:Key="DatePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
             <SolidColorBrush x:Key="DatePickerHeaderForegroundThemeBrush" Color="#FFFFFFFF" />
             <SolidColorBrush x:Key="DatePickerForegroundThemeBrush" Color="#FF000000" />
@@ -80,8 +79,7 @@
             <StaticResource x:Key="DatePickerFlyoutPresenterSpacerFill" ResourceKey="SystemControlForegroundBaseLowBrush" />
             <StaticResource x:Key="DatePickerFlyoutPresenterHighlightFill" ResourceKey="SystemControlHighlightListAccentLowBrush" />
             <StaticResource x:Key="DatePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="SystemColorHighlightTextColor" />
-            <x:Double x:Key="DatePickerFlyoutPresenterHighlightOverlayOpacity">0</x:Double>
-            <x:Double x:Key="DatePickerFlyoutPresenterHighlightBackgroundOpacity">1</x:Double>
+            <Visibility x:Key="DatePickerFlyoutPresenterHighlightXRayVisibility">Collapsed</Visibility>
             <StaticResource x:Key="DatePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
             <x:Double x:Key="DatePickerSelectorThemeMinWidth">80</x:Double>
             <x:Double x:Key="DatePickerSpacerThemeWidth">1</x:Double>
@@ -132,8 +130,7 @@
             <StaticResource x:Key="DatePickerFlyoutPresenterSpacerFill" ResourceKey="DividerStrokeColorDefaultBrush" />
             <StaticResource x:Key="DatePickerFlyoutPresenterHighlightFill" ResourceKey="AccentFillColorDefaultBrush" />
             <StaticResource x:Key="DatePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="TextOnAccentFillColorPrimary" />
-            <x:Double x:Key="DatePickerFlyoutPresenterHighlightOverlayOpacity">1</x:Double>
-            <x:Double x:Key="DatePickerFlyoutPresenterHighlightBackgroundOpacity">0</x:Double>
+            <Visibility x:Key="DatePickerFlyoutPresenterHighlightXRayVisibility">Visible</Visibility>
             <StaticResource x:Key="DatePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
             <SolidColorBrush x:Key="DatePickerHeaderForegroundThemeBrush" Color="#FF000000" />
             <SolidColorBrush x:Key="DatePickerForegroundThemeBrush" Color="#FF000000" />
@@ -417,6 +414,10 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <Grid>
+                                <Rectangle x:Name="HighlightRect"
+                                    Fill="{ThemeResource DatePickerFlyoutPresenterHighlightFill}"
+                                    VerticalAlignment="Center"
+                                    Height="{ThemeResource DatePickerFlyoutPresenterHighlightHeight}"/>
                                 <Grid x:Name="PickerHostGrid">
 
                                     <Grid.ColumnDefinitions>
@@ -426,13 +427,6 @@
                                         <ColumnDefinition Width="Auto" x:Name="SecondSpacerColumn" />
                                         <ColumnDefinition Width="78*" x:Name="YearColumn" />
                                     </Grid.ColumnDefinitions>
-                                    <Rectangle x:Name="HighlightRect"
-                                    Fill="{ThemeResource DatePickerFlyoutPresenterHighlightFill}"
-                                    Grid.Column="0"
-                                    Grid.ColumnSpan="5"
-                                    VerticalAlignment="Center"
-                                    Height="{ThemeResource DatePickerFlyoutPresenterHighlightHeight}"
-                                    Opacity="{ThemeResource DatePickerFlyoutPresenterHighlightBackgroundOpacity}"/>
                                     <Rectangle x:Name="FirstPickerSpacing"
                                     Fill="{ThemeResource DatePickerFlyoutPresenterSpacerFill}"
                                     HorizontalAlignment="Center"
@@ -449,7 +443,7 @@
                                     ReplacementColor="{ThemeResource DatePickerFlyoutPresenterHighlightForegroundColor}"
                                     Background="{ThemeResource DatePickerFlyoutPresenterHighlightFill}"
                                     Height="{ThemeResource DatePickerFlyoutPresenterHighlightHeight}"
-                                    Opacity="{ThemeResource DatePickerFlyoutPresenterHighlightOverlayOpacity}"
+                                    Visibility="{ThemeResource DatePickerFlyoutPresenterHighlightXRayVisibility}"
                                     VerticalAlignment="Center" IsHitTestVisible="false"/>
                             </Grid>
                             <Grid Grid.Row="1" Height="{ThemeResource DatePickerFlyoutPresenterAcceptDismissHostGridHeight}" x:Name="AcceptDismissHostGrid">
