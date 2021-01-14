@@ -15,12 +15,18 @@
         <StackPanel x:Name="Panel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <DatePicker/>
             <TimePicker/>
-            <Button Content="Test"/>
+
+            <Grid>
+                <TextBlock x:Name="Target" Text="This string will be partially highlighted"/>
+                <primitives:XRayOverlayControl
+                    ReplacementColor="Black"
+                    TargetElement="{Binding ElementName=Target}"
+                    Width="50"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Center"
+                    Background="LightBlue"/>
+
+            </Grid>
         </StackPanel>
-        <primitives:XRayOverlayControl
-            ReplacementColor="Black"
-            TargetElement="{Binding ElementName=Panel}"
-            Width="200" Height="50"
-            Background="White"/>
     </Grid>
 </local:TestPage>
