@@ -38,8 +38,8 @@
             <contract7NotPresent:StaticResource x:Key="TimePickerFlyoutPresenterBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
             <contract7NotPresent:StaticResource x:Key="TimePickerFlyoutPresenterBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
             <StaticResource x:Key="TimePickerFlyoutPresenterSpacerFill" ResourceKey="DividerStrokeColorDefaultBrush" />
-            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="AccentFillColorDefaultBrush" />
-            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="TextOnAccentFillColorPrimary" />
+            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="AccentAAFillColorDefaultBrush" />
+            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="TextOnAccentAAFillColorPrimary" />
             <Visibility x:Key="TimePickerFlyoutPresenterHighlightXRayVisibility">Visible</Visibility>
             <StaticResource x:Key="TimePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
             <SolidColorBrush x:Key="TimePickerHeaderForegroundThemeBrush" Color="#FFFFFFFF" />
@@ -71,7 +71,7 @@
             <StaticResource x:Key="TimePickerFlyoutPresenterSpacerFill" ResourceKey="SystemControlForegroundBaseLowBrush" />
             <StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="SystemControlHighlightListAccentLowBrush" />
             <StaticResource x:Key="TimePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="SystemColorHighlightTextColor" />
-            <Visibility x:Key="DatePickerFlyoutPresenterHighlightXRayVisibility">Collapsed</Visibility>
+            <Visibility x:Key="TimePickerFlyoutPresenterHighlightXRayVisibility">Collapsed</Visibility>
             <StaticResource x:Key="TimePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
             <x:Double x:Key="TimePickerSelectorThemeMinWidth">80</x:Double>
             <Thickness x:Key="TimePickerHeaderThemeMargin">0,0,0,4</Thickness>
@@ -114,9 +114,9 @@
             <contract7NotPresent:StaticResource x:Key="TimePickerFlyoutPresenterBackground" ResourceKey="SystemControlBackgroundChromeMediumLowBrush" />
             <contract7NotPresent:StaticResource x:Key="TimePickerFlyoutPresenterBorderBrush" ResourceKey="SurfaceStrokeColorDefaultBrush" />
             <StaticResource x:Key="TimePickerFlyoutPresenterSpacerFill" ResourceKey="DividerStrokeColorDefaultBrush" />
-            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="AccentFillColorDefaultBrush" />
-            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="TextOnAccentFillColorPrimary" />
-            <Visibility x:Key="DatePickerFlyoutPresenterHighlightXRayVisibility">Visible</Visibility>
+            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightFill" ResourceKey="AccentAAFillColorDefaultBrush" />
+            <StaticResource x:Key="TimePickerFlyoutPresenterHighlightForegroundColor" ResourceKey="TextOnAccentAAFillColorPrimary" />
+            <Visibility x:Key="TimePickerFlyoutPresenterHighlightXRayVisibility">Visible</Visibility>
             <StaticResource x:Key="TimePickerLightDismissOverlayBackground" ResourceKey="SystemControlPageBackgroundMediumAltMediumBrush" />
             <SolidColorBrush x:Key="TimePickerForegroundThemeBrush" Color="#FF000000" />
             <SolidColorBrush x:Key="TimePickerHeaderForegroundThemeBrush" Color="#FF000000" />
